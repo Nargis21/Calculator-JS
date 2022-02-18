@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+
+<body>
+    <input id="input-field" type="text">
+    <button id="double-btn">Double</button>
+    <button id="triple-btn">Triple</button>
+    <p>Result:</p><input id="result-field" type="text">
+
+    <script>
+        // Create a function
+        function getResult(num) {
+            const inputfield = document.getElementById('input-field');
+            const inputValue = inputfield.value;
+            if (inputValue == 'number') {
+                const inputResult = inputValue * num;
+                const resultField = document.getElementById('result-field');
+                resultField.value = inputResult;
+            }
+            else {
+                alert('Please Enter a Number!')
+            }
+            inputfield.value = '';
+
+        }
+        // Called function for double button
+        document.getElementById('double-btn').addEventListener('click', function () {
+            getResult(2);
+        })
+        // Called function for triple button
+        document.getElementById('triple-btn').addEventListener('click', function () {
+            getResult(3);
+        })
+
+    </script>
+</body>
+
+</html>
